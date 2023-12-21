@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(15,15,15);
+}
+.heading h1{
+    color:white;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+    text-align: center;
+    text-shadow: 3px 6px rgba(50,50,70,0.7);
+}
+.heading h4{
+    color:white;
+    text-align: center;
+}
+.searchBox{
+    text-align: center;
+    margin: 3rem;
+    margin-top: 30px;
+}
+
+.signout-div{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: px;
+}
+
+.signOutButton{
+    width: 10rem;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0.1rem 3rem;
+    background-color: #ff5252;
+    cursor: pointer;
+}
+
+.search-bar{
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if there's not enough space */
+    justify-content: space-between;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(204, 255, 51, 0.5);
+    padding: 16px;
+    margin: 16px;
+    width: 300px; /* Adjusted width to 300px for a square shape */
+    height: 300px; /* Set the height to match the width for a square shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    position: relative;
+    transition: background 0.3s;
+}
+.highlighted-text {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    display: 'inline-block'
+  }
+.card .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+.card .info h2 {
+    margin: 0;
+    font-weight: 900;
+    text-align: center;
+    color: black;
+}
+.card .info p {
+    margin: 0;
+    font-size: 17px;
+    letter-spacing: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(204, 255, 51, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.card:hover {
+    background: rgba(204, 255, 51, 0.5);
+}
+.card:hover:before {
+    opacity: 1;
+}
+.card .recipe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: justify;
+    padding: 0.5rem 1rem;
+    display: none;
+    overflow-y: auto;
+    max-height: 300px;
+    box-sizing: border-box;
+}
+.card:hover .recipe {
+    display: block;
+}
+.recipe p {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sign-up-container {
+    text-align: center;
+    margin: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up-input {
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    margin-bottom: 1rem;
+    margin: 2.5px;
+}
+
+.sign-up-button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0.1rem 3rem;
+    background-color: #2ecc71; /* Change the color to your preferred color */
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.app-background{
+    background-color: rgba(15,15,15);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.sign-in-container {
+    text-align: center;
+    margin: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.sign-in-input {
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    margin-bottom: 1rem;
+    margin: 2.5px;
+}
+
+.sign-in-button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0.1rem 3rem;
+    background-color: #3498db; /* Change the color to your preferred color */
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.title{
+    padding: 5px;
+    margin-left: 3px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.title-s{
+    padding: 5px;
+    margin-left: 3px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.search-history {
+    margin-inline: 20%;
+    background-color: gainsboro;
+    height: auto;
+    text-align: center;
+    border-radius: 8px; 
+  }  
+
+  .white-box {
+    background-color: gainsboro;
+    border-radius: 8px;
+    align-items: center;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .search-item {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .his-but{
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: left;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+  }
