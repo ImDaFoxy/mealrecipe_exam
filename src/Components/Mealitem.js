@@ -1,36 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Mealitem = ({ getMeal }) => {
-  const [showRecipe, setShowRecipe] = useState(false);
+    if (!getMeal) {
+      return null;
+    }
 
-  const toggleRecipe = () => {
-    setShowRecipe(!showRecipe);
-  };
-
-  if (!getMeal) {
-    return null;
-  }
-
-  return (
-    <>
-      <div className="card" onClick={toggleRecipe}>
-        <img
-          src={getMeal.strMealThumb}
-          alt={getMeal.strMeal}
-          style={{ filter: showRecipe ? "brightness(0%)" : "brightness(100%)" }}
-        ></img>
-        <div className="info" style={{ display: showRecipe ? "none" : "block" }}>
-          <h2 className="highlighted-text">{getMeal.strMeal}</h2>
-        </div>
-        {showRecipe && (
-          <div className="recipe" style={{ color: "white" }}>
+    return (
+      <>
+        <div className="card">
+          <img src={getMeal.strMealThumb} alt={getMeal.strMeal}></img>
+          <div className="info">
+            <h2 className="highlighted-text">{getMeal.strMeal}</h2>
+          </div>
+          <div className="recipe">
             <h4>Recipe:</h4>
             <p>{getMeal.strInstructions}</p>
           </div>
-        )}
-      </div>
-    </>
-  );
-};
+        </div>
+      </>
+    );
+  };
 
 export default Mealitem;
